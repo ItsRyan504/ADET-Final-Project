@@ -1,0 +1,36 @@
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.local
+
+# Frontend dependencies & build
+src/JazSam/node_modules/
+src/JazSam/dist/
+src/JazSam/dist-ssr/
+
+# PHP uploads (user-generated content, not source code)
+src/salespresso-api/uploads/*
+!src/salespresso-api/uploads/.gitkeep
+
+# Python test cache
+**/__pycache__/
+**/.pytest_cache/
+**/*.pyc
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
