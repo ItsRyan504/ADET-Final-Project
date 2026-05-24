@@ -3,6 +3,7 @@
 .env.local
 .env.*.local
 *.local
+src/salespresso-api/paymongo-config.php
 
 # Frontend dependencies & build
 src/JazSam/node_modules/

@@ -1,0 +1,19 @@
+/* =====================
+   PAGE SLIDE TRANSITION
+   ===================== */
+@keyframes pageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: pageSlideIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* Ensures the element doesn't flash before the animation starts */
+  will-change: opacity, transform;
+}

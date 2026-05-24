@@ -1,0 +1,404 @@
+/* =============================================
+   ADMIN LOGIN PAGE — Split-Panel Design
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+.al-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  background: #faf7f4;
+  overflow: hidden;
+}
+
+/* ── Left brand panel ── */
+.al-left {
+  flex: 0 0 38%;
+  min-width: 300px;
+  background: linear-gradient(155deg, #1a0a04 0%, #3b1e0c 40%, #6b3a1f 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 44px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative light orbs */
+.al-left::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,135,79,0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.al-left::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,135,79,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.al-left-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.al-left-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.al-left-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.al-left-tagline {
+  position: relative;
+  z-index: 1;
+}
+
+.al-left-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.al-left-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+  max-width: 280px;
+}
+
+.al-left-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(200,135,79,0.2);
+  border: 1px solid rgba(200,135,79,0.4);
+  border-radius: 100px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.al-left-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c8874f;
+  box-shadow: 0 0 0 2px rgba(200,135,79,0.4);
+  animation: alPulse 2s ease-in-out infinite;
+}
+
+@keyframes alPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+/* ── Right form panel ── */
+.al-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  background: #f8f5f1;
+  overflow-y: auto;
+}
+
+/* ── Card ── */
+.al-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e8e0d8;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: alCardIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes alCardIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Brand ── */
+.al-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.al-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(107,58,31,0.08);
+  padding: 6px;
+}
+
+.al-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.al-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a0a04;
+  line-height: 1.1;
+}
+
+.al-brand-sub {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c8874f;
+}
+
+/* ── Titles ── */
+.al-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1a0a04;
+  text-align: center;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.al-desc {
+  font-size: 0.85rem;
+  color: #8a7e74;
+  text-align: center;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* ── Error banner ── */
+.al-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.07);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #b91c1c;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  animation: alShake 0.35s ease;
+}
+
+@keyframes alShake {
+  0%  { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-3px); }
+  100%{ transform: translateX(0); }
+}
+
+/* ── Form ── */
+.al-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.al-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.al-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #7a7068;
+  text-transform: uppercase;
+}
+
+.al-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.al-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #b0a89e;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.al-input-wrap input {
+  width: 100%;
+  padding: 13px 42px;
+  background: #f8f5f1;
+  border: 1.5px solid #e0d8d0;
+  border-radius: 11px;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: #1a0a04;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.al-input-wrap input::placeholder {
+  color: #b0a89e;
+}
+
+.al-input-wrap input:focus {
+  border-color: #6b3a1f;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(107,58,31,0.08);
+}
+
+.al-input-wrap input:disabled {
+  opacity: 0.5;
+}
+
+.al-pw-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b0a89e;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.2s;
+}
+.al-pw-toggle:hover { color: #6b3a1f; }
+
+/* ── Submit button ── */
+.al-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  background: #1a0a04;
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.al-submit:hover:not(:disabled) {
+  background: #3b1e0c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(107,58,31,0.25);
+}
+
+.al-submit:active:not(:disabled) { transform: translateY(0); }
+.al-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Spinner */
+.al-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255,255,255,0.25);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: alSpin 0.7s linear infinite;
+}
+@keyframes alSpin { to { transform: rotate(360deg); } }
+
+/* ── Hint ── */
+.al-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 0.76rem;
+  color: #b0a89e;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ── Back link ── */
+.al-back {
+  margin-top: 16px;
+  font-size: 0.82rem;
+  color: #6b3a1f;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s;
+  font-family: 'Inter', sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.al-back:hover { opacity: 0.7; }
+
+/* ══ Responsive ══ */
+@media (max-width: 768px) {
+  .al-left {
+    display: none;
+  }
+  .al-right {
+    padding: 40px 20px;
+  }
+  .al-card {
+    padding: 36px 24px;
+  }
+}

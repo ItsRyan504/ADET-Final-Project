@@ -1,0 +1,135 @@
+/* =====================
+   RESET & BASE
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #f8f6f2;
+  --color-bg-light: #ffffff;
+  --color-dark: #1a1a1a;
+  --color-dark-footer: #2a2825;
+  --color-dark-footer-deep: #221f1e;
+  --color-brown: #6b4226;
+  --color-brown-light: #a0603a;
+  --color-brown-accent: #c8874f;
+  --color-cream: #f5ede0;
+  --color-muted: #7a7472;
+  --color-border: #e0d9d0;
+  --color-gold: #d4a853;
+  --color-gold-light: #f0c87a;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-display: 'DM Serif Display', serif;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.14);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition: 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* =====================
+   UTILITY
+   ===================== */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-pad {
+  padding: 80px 0;
+}
+
+.text-center { text-align: center; }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-dark);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-primary:hover {
+  background: var(--color-brown);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--color-dark);
+  padding: 11px 26px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1.5px solid var(--color-dark);
+  transition: all var(--transition);
+}
+.btn-outline:hover {
+  background: var(--color-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.star-row {
+  display: flex;
+  gap: 2px;
+  color: var(--color-gold);
+  font-size: 0.85rem;
+}
+
+@keyframes orderReadyIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
